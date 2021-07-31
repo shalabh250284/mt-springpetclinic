@@ -8,7 +8,8 @@ pipeline {
         stage('Example Build') {
             steps {
                 echo 'Hello, Maven'
-                sh 'mvn --version'
+                sh 'mvn install'
+                // sh 'mvn --version'
             }
         }
         // stage('Example Test') {
