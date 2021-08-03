@@ -211,6 +211,27 @@
         </executions>
       </plugin>
 
+     <!-- Docker Maven Plugin-->
+
+        <plugin>
+            <groupId>com.spotify</groupId>
+            <artifactId>dockerfile-maven-plugin</artifactId>
+            <configuration>
+                <repository>${project.artifactId}</repository>
+                <tag>${project.version}</tag>
+            </configuration> 
+            <executions>
+                <execution>
+	                  <id>build-image</id>
+                  	<goals>
+	                    	<goal>build</goal>
+                  	</goals>
+                </execution>
+            </executions>
+        </plugin>
+  
+
+
       <!-- Spring Boot Actuator displays build-related information if a git.properties
         file is present at the classpath -->
       <plugin>
