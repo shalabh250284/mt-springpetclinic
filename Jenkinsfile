@@ -26,7 +26,7 @@ pipeline {
             }            
             steps {
                 echo 'cloudformation deploy'
-                sh 'aws cloudformation deploy --template-file ./cfn-alb-asg.yml --stack-name my-spring-stack --parameter-overrides VPC=vpc-930695ee PubSubnetZoneA=subnet-9ec588bf PubSubnetZoneB=subnet-d66de7e7 PubSubnetZoneC=subnet-913e78f7 PubSubnetZoneD=subnet-274c0f78 PubSubnetZoneE=subnet-b93e06b7 PubSubnetZoneF=subnet-833523ce springkey=key-045ebb19f6e7ff88d
+                sh 'aws cloudformation deploy --template-file ./cfn-alb-asg.yml --stack-name my-spring-stack --parameter-overrides VPC=vpc-930695ee PubSubnetZoneA=subnet-9ec588bf PubSubnetZoneB=subnet-d66de7e7 PubSubnetZoneC=subnet-913e78f7 PubSubnetZoneD=subnet-274c0f78 PubSubnetZoneE=subnet-b93e06b7 PubSubnetZoneF=subnet-833523ce --kms-key-id springkey=key-045ebb19f6e7ff88d
             }
         }        
     }
