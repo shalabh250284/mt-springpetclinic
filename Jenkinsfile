@@ -27,7 +27,7 @@ pipeline {
             }            
             steps {
                 echo 'cloudformation deploy'
-                sh 'aws cloudformation create-stack --stack-name my-spring-stack --template-body ./cfn-alb-asg.yml --parameters ParameterKey=VPC,ParameterValue=vpc-930695ee ParameterKey=PubSubnetZoneA,ParameterValue=subnet-9ec588bf ParameterKey=PubSubnetZoneB,ParameterValue=subnet-d66de7e7 ParameterKey=PubSubnetZoneC,ParameterValue=subnet-913e78f7 ParameterKey=PubSubnetZoneD,ParameterValue=subnet-274c0f78 ParameterKey=PubSubnetZoneE,ParameterValue=subnet-b93e06b7 ParameterKey=PubSubnetZoneF,ParameterValue=subnet-833523ce ParameterKey=KeyName,ParameterValue=key-045ebb19f6e7ff88d --capabilities CAPABILITY_IAM'
+                sh 'aws cloudformation create-stack --stack-name my-spring-stack --template-body file://cfn-alb-asg.yml --parameters ParameterKey=VPC,ParameterValue=vpc-930695ee ParameterKey=PubSubnetZoneA,ParameterValue=subnet-9ec588bf ParameterKey=PubSubnetZoneB,ParameterValue=subnet-d66de7e7 ParameterKey=PubSubnetZoneC,ParameterValue=subnet-913e78f7 ParameterKey=PubSubnetZoneD,ParameterValue=subnet-274c0f78 ParameterKey=PubSubnetZoneE,ParameterValue=subnet-b93e06b7 ParameterKey=PubSubnetZoneF,ParameterValue=subnet-833523ce ParameterKey=KeyName,ParameterValue=key-045ebb19f6e7ff88d --capabilities CAPABILITY_IAM'
             }
         }        
     }
