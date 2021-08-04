@@ -23,6 +23,7 @@ pipeline {
                 AWS_ACCESS_ID = credentials('jenkins-aws-secret-key-id')
                 AWS_ACCESS_KEY_ID = "${env.AWS_ACCESS_ID_USR}"
                 AWS_SECRET_ACCESS_KEY = "${env.AWS_ACCESS_ID_PSW}"
+                AWS_DEFAULT_REGION= us-east-1
             }            
             steps {
                 echo 'cloudformation deploy'
